@@ -8,6 +8,8 @@ geneExpLungbyName  = read.delim("GTEx_Analysis_2017-06-05_v8_RNASeQCv1.1.9_gene_
                                 row.names = 1,check.names = F)
 geneExpLungbyName_t = as.data.frame(t(geneExpLungbyName))
 
+geneExpLungbyName_t = log2(geneExpLungbyName_t+1)
+
 mylist1<-vector()
 numberofgenes1<-0
 #get gene list for ACE2
